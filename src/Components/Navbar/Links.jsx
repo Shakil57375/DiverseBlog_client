@@ -74,7 +74,7 @@ const Links = ({ isActive, setIsActive }) => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                     >
-                        <div className="ml-4 mt-2 flex flex-col gap-2">
+                        <div className="ml-4 mt-2 flex flex-col gap-3">
                             <motion.div
                                 whileHover={{
                                     scale: 1.05,
@@ -163,7 +163,7 @@ const Links = ({ isActive, setIsActive }) => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                     >
-                        <div className="ml-4 mt-2 flex flex-col gap-2">
+                        <div className="ml-4 mt-2 flex flex-col gap-3">
                             <motion.div
                                 whileHover={{
                                     scale: 1.05,
@@ -265,7 +265,7 @@ const Links = ({ isActive, setIsActive }) => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                     >
-                        <div className="ml-4 mt-2 flex flex-col gap-2">
+                        <div className="ml-4 mt-2 flex flex-col gap-3">
                             <motion.div
                                 whileHover={{
                                     scale: 1.05,
@@ -355,7 +355,7 @@ const Links = ({ isActive, setIsActive }) => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                     >
-                        <div className="ml-4 mt-2 flex flex-col gap-2">
+                        <div className="ml-4 mt-2 flex flex-col gap-3">
                             <motion.div
                                 whileHover={{
                                     scale: 1.05,
@@ -444,7 +444,7 @@ const Links = ({ isActive, setIsActive }) => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                     >
-                        <div className="ml-4 mt-2 flex flex-col gap-2">
+                        <div className="ml-4 mt-2 flex flex-col gap-3">
                             <motion.div
                                 whileHover={{
                                     scale: 1.05,

@@ -5,7 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./Main/Main";
 import Home from "./Pages/Home/Home/Home";
-import FoodBlogs from "./Pages/FoodBlogs/FoodBlogs";
+import Recipes from "./Pages/Food/Recipes"
 import AuthProvider from "./Provider/AuthProvider";
 import Login from "./Authentication/Login";
 import Register from "./Authentication/Register";
@@ -20,8 +20,8 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "/foodBlogs",
-                element: <FoodBlogs />,
+                path: "/foodBlogs/recipes",
+                element: <Recipes/>,
             },
             {
                 path : "/register",
