@@ -44,8 +44,8 @@ const Links = ({ isActive, setIsActive }) => {
                 >
                     <ActiveLink to={"/"}>
                         <div className="flex items-center ">
-                        <FaHome />
-                        <span className="pl-2">Home</span>
+                            <FaHome />
+                            <span className="pl-2">Home</span>
                         </div>
                     </ActiveLink>
                 </motion.div>
@@ -65,25 +65,78 @@ const Links = ({ isActive, setIsActive }) => {
                             <FaChevronDown className="ml-auto" />
                         )}
                     </div>
-                    {activeCategory === "food" && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{
+                            height: activeCategory === "food" ? "auto" : 0,
+                            opacity: activeCategory === "food" ? 1 : 0,
+                        }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                    >
                         <div className="ml-4 mt-2 flex flex-col gap-2">
-                            <ActiveLink to={"/foodBlogs/recipes"}>
-                                Recipes
-                            </ActiveLink>
-                            <ActiveLink to={"/foodBlogs/reviews"}>
-                                Restaurant Reviews
-                            </ActiveLink>
-                            <ActiveLink to={"/foodBlogs/healthy"}>
-                                Healthy Eating
-                            </ActiveLink>
-                            <ActiveLink to={"/foodBlogs/trends"}>
-                                Food Trends
-                            </ActiveLink>
-                            <ActiveLink to={"/foodBlogs/tips"}>
-                                Cooking Tips
-                            </ActiveLink>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/foodBlogs/recipes"}>
+                                    Recipes
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/foodBlogs/reviews"}>
+                                    Restaurant Reviews
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/foodBlogs/healthy"}>
+                                    Healthy Eating
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/foodBlogs/trends"}>
+                                    Food Trends
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/foodBlogs/tips"}>
+                                    Cooking Tips
+                                </ActiveLink>
+                            </motion.div>
                         </div>
-                    )}
+                    </motion.div>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -101,28 +154,90 @@ const Links = ({ isActive, setIsActive }) => {
                             <FaChevronDown className="ml-auto" />
                         )}
                     </div>
-                    {activeCategory === "sports" && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{
+                            height: activeCategory === "sports" ? "auto" : 0,
+                            opacity: activeCategory === "sports" ? 1 : 0,
+                        }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                    >
                         <div className="ml-4 mt-2 flex flex-col gap-2">
-                            <ActiveLink to={"/sports/cricket"}>
-                                Cricket
-                            </ActiveLink>
-                            <ActiveLink to={"/sports/football"}>
-                                Football
-                            </ActiveLink>
-                            <ActiveLink to={"/sports/basketball"}>
-                                Basketball
-                            </ActiveLink>
-                            <ActiveLink to={"/sports/tennis"}>
-                                Tennis
-                            </ActiveLink>
-                            <ActiveLink to={"/sports/esports"}>
-                                Esports
-                            </ActiveLink>
-                            <ActiveLink to={"/sports/fitness"}>
-                                Fitness and Training
-                            </ActiveLink>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/sports/cricket"}>
+                                    Cricket
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/sports/football"}>
+                                    Football
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/sports/basketball"}>
+                                    Basketball
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/sports/tennis"}>
+                                    Tennis
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/sports/esports"}>
+                                    Esports
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/sports/fitness"}>
+                                    Fitness and Training
+                                </ActiveLink>
+                            </motion.div>
                         </div>
-                    )}
+                    </motion.div>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -140,30 +255,84 @@ const Links = ({ isActive, setIsActive }) => {
                             <FaChevronDown className="ml-auto" />
                         )}
                     </div>
-                    {activeCategory === "technology" && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{
+                            height:
+                                activeCategory === "technology" ? "auto" : 0,
+                            opacity: activeCategory === "technology" ? 1 : 0,
+                        }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                    >
                         <div className="ml-4 mt-2 flex flex-col gap-2">
-                            <ActiveLink to={"/technology/gadgets"}>
-                                Gadgets and Reviews
-                            </ActiveLink>
-                            <ActiveLink to={"/technology/software"}>
-                                Software and Apps
-                            </ActiveLink>
-                            <ActiveLink to={"/technology/ai"}>
-                                AI and Machine Learning
-                            </ActiveLink>
-                            <ActiveLink to={"/technology/cybersecurity"}>
-                                Cybersecurity
-                            </ActiveLink>
-                            <ActiveLink to={"/technology/development"}>
-                                Programming and Development
-                            </ActiveLink>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/technology/gadgets"}>
+                                    Gadgets and Reviews
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/technology/software"}>
+                                    Software and Apps
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/technology/ai"}>
+                                    AI and Machine Learning
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/technology/cybersecurity"}>
+                                    Cybersecurity
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/technology/development"}>
+                                    Programming and Development
+                                </ActiveLink>
+                            </motion.div>
                         </div>
-                    )}
+                    </motion.div>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.0 }}
+                    transition={{ delay: 0.8 }}
                     className="cursor-pointer"
                     onClick={() => toggleCategory("entertainment")}
                 >
@@ -176,30 +345,84 @@ const Links = ({ isActive, setIsActive }) => {
                             <FaChevronDown className="ml-auto" />
                         )}
                     </div>
-                    {activeCategory === "entertainment" && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{
+                            height:
+                                activeCategory === "entertainment" ? "auto" : 0,
+                            opacity: activeCategory === "entertainment" ? 1 : 0,
+                        }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                    >
                         <div className="ml-4 mt-2 flex flex-col gap-2">
-                            <ActiveLink to={"/entertainment/movies"}>
-                                Movies and TV Shows
-                            </ActiveLink>
-                            <ActiveLink to={"/entertainment/music"}>
-                                Music
-                            </ActiveLink>
-                            <ActiveLink to={"/entertainment/celebrity"}>
-                                Celebrity News
-                            </ActiveLink>
-                            <ActiveLink to={"/entertainment/videogames"}>
-                                Video Games
-                            </ActiveLink>
-                            <ActiveLink to={"/entertainment/events"}>
-                                Events and Festivals
-                            </ActiveLink>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/entertainment/movies"}>
+                                    Movies and TV Shows
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/entertainment/music"}>
+                                    Music
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/entertainment/celebrity"}>
+                                    Celebrity News
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/entertainment/videogames"}>
+                                    Video Games
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/entertainment/events"}>
+                                    Events and Festivals
+                                </ActiveLink>
+                            </motion.div>
                         </div>
-                    )}
+                    </motion.div>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.2 }}
+                    transition={{ delay: 0.8 }}
                     className="cursor-pointer"
                     onClick={() => toggleCategory("business")}
                 >
@@ -212,25 +435,78 @@ const Links = ({ isActive, setIsActive }) => {
                             <FaChevronDown className="ml-auto" />
                         )}
                     </div>
-                    {activeCategory === "business" && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{
+                            height: activeCategory === "business" ? "auto" : 0,
+                            opacity: activeCategory === "business" ? 1 : 0,
+                        }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                    >
                         <div className="ml-4 mt-2 flex flex-col gap-2">
-                            <ActiveLink to={"/business/entrepreneurship"}>
-                                Entrepreneurship
-                            </ActiveLink>
-                            <ActiveLink to={"/business/marketing"}>
-                                Marketing and Sales
-                            </ActiveLink>
-                            <ActiveLink to={"/business/finance"}>
-                                Finance and Investing
-                            </ActiveLink>
-                            <ActiveLink to={"/business/startups"}>
-                                Startups
-                            </ActiveLink>
-                            <ActiveLink to={"/business/productivity"}>
-                                Productivity
-                            </ActiveLink>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/business/entrepreneurship"}>
+                                    Entrepreneurship
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/business/marketing"}>
+                                    Marketing and Sales
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/business/finance"}>
+                                    Finance and Investing
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/business/startups"}>
+                                    Startups
+                                </ActiveLink>
+                            </motion.div>
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.05,
+                                    color: "rgb(225, 186, 135)",
+                                    textDecoration: "underline",
+                                }}
+                                className="relative"
+                            >
+                                <ActiveLink to={"/business/productivity"}>
+                                    Productivity
+                                </ActiveLink>
+                            </motion.div>
                         </div>
-                    )}
+                    </motion.div>
                 </motion.div>
             </div>
         </motion.div>
