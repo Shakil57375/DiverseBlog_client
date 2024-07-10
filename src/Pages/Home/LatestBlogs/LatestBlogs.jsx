@@ -1,9 +1,14 @@
-const LatestBlogs = () => {
-  return (
-    <div>
-      <p>LatestBlogs</p>
-    </div>
-  )
-}
+import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 
-export default LatestBlogs
+const LatestBlogs = () => {
+    return (
+        <div>
+            <SectionTitle
+                title={"Latest Blogs"}
+                subtitle={"check out the latest blogs"}
+            ></SectionTitle>
+        </div>
+    );
+};
+
+export default LatestBlogs;
