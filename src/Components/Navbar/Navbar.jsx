@@ -59,9 +59,13 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="flex gap-3 basis-2/5 items-center justify-end z-50">
-                    {user && (
+                    {user ? (
                         <Link to={"/write"} className="btn btn-primary">
                             Write
+                        </Link>
+                    ) : (
+                        <Link className="btn btn-primary" to={"/login"}>
+                            Login
                         </Link>
                     )}
                     {user && (
