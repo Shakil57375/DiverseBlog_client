@@ -1,8 +1,7 @@
 import { useContext } from "react";
-import { FaGoogle } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-
+import GoogleLogo from "../../src/assets/google-logo.png"
 const SocialLogin = () => {
     const { googleSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -35,13 +34,14 @@ const SocialLogin = () => {
             });
     };
     return (
-        <div>
+        <div className=" flex justify-center w-full pb-10"> 
             <div className="divider"></div>
             <button
                 onClick={handleGoogleSignIn}
-                className="btn btn-circle btn-outline"
+                className=" flex items-center gap-4  px-8 py-4 shadow-lg rounded-2xl"
             >
-                <FaGoogle className="text-red-600"></FaGoogle>
+                <img src={GoogleLogo} className="w-12 h-12" alt="" />
+                <span className="text-lg font-semibold">Sign in with Google</span>
             </button>
         </div>
     );
