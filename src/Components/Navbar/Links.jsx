@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import {
     FaChevronDown,
@@ -12,9 +12,17 @@ import {
 } from "react-icons/fa";
 import ActiveLink from "../../utils/ActiveLink/ActiveLink";
 import { motion } from "framer-motion";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Links = ({ isActive, setIsActive }) => {
     const [activeCategory, setActiveCategory] = useState(null);
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut();
+        setIsActive(false);
+    };
 
     const toggleCategory = (category) => {
         setActiveCategory(activeCategory === category ? null : category);
@@ -507,6 +515,30 @@ const Links = ({ isActive, setIsActive }) => {
                             </motion.div>
                         </div>
                     </motion.div>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.4 }}
+                >
+                    {user ? (
+                        <button
+                            onClick={() => {
+                                handleLogOut();
+                                setIsActive(false);
+                            }}
+                            className="btn btn-primary"
+                        >
+                            Logout
+                        </button>
+                    ) : (
+                        <ActiveLink
+                            to={"/login"}
+                            onClick={() => setIsActive(false)}
+                        >
+                            <span className="btn btn-primary">login</span>
+                        </ActiveLink>
+                    )}
                 </motion.div>
             </div>
         </motion.div>
