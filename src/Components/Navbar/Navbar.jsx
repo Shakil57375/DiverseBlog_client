@@ -8,7 +8,7 @@ import Links from "./Links";
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-import {  AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
     const [isActive, setIsActive] = useState(false);
@@ -67,7 +67,12 @@ const Navbar = () => {
                         </a>
                     </div>
                 </div>
-                <div className="flex basis-2/5 items-center justify-end z-50">
+                <div className="flex gap-3 basis-2/5 items-center justify-end z-50">
+                    {user && (
+                        <Link className="btn btn-primary" to={"/write"}>
+                            Write
+                        </Link>
+                    )}
                     {user ? (
                         <>
                             <button
@@ -80,7 +85,9 @@ const Navbar = () => {
                     ) : (
                         <>
                             <div>
-                                <Link className="btn btn-primary" to="/login">Login</Link>
+                                <Link className="btn btn-primary" to="/login">
+                                    Login
+                                </Link>
                             </div>
                         </>
                     )}
