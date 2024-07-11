@@ -13,6 +13,8 @@ import {
 import ActiveLink from "../../utils/ActiveLink/ActiveLink";
 import { motion } from "framer-motion";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { AiOutlineLogin } from "react-icons/ai";
+import { BiLogOutCircle } from "react-icons/bi";
 
 const Links = ({ isActive, setIsActive }) => {
     const [activeCategory, setActiveCategory] = useState(null);
@@ -522,21 +524,25 @@ const Links = ({ isActive, setIsActive }) => {
                     transition={{ delay: 1.4 }}
                 >
                     {user ? (
-                        <button
+                        <div
                             onClick={() => {
                                 handleLogOut();
                                 setIsActive(false);
                             }}
-                            className="btn btn-primary"
+                            className="flex gap-3 items-center cursor-pointer"
                         >
+                            <BiLogOutCircle />
                             Logout
-                        </button>
+                        </div>
                     ) : (
                         <ActiveLink
                             to={"/login"}
                             onClick={() => setIsActive(false)}
                         >
-                            <span className="btn btn-primary">login</span>
+                            <div className="flex gap-3 items-center cursor-pointer">
+                                <AiOutlineLogin className="text-white" />
+                                <span>Login</span>
+                            </div>
                         </ActiveLink>
                     )}
                 </motion.div>
