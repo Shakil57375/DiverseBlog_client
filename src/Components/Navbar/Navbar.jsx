@@ -13,9 +13,6 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const Navbar = () => {
     const [isActive, setIsActive] = useState(false);
     const { user } = useContext(AuthContext);
-    const handleAddBlog = () =>{
-        
-    }
     return (
         <div>
             <div className="flex items-center bg-white shadow-lg py-6 px-20 fixed w-full top-0 z-20">
@@ -62,9 +59,9 @@ const Navbar = () => {
                 </div>
                 <div className="flex gap-3 basis-2/5 items-center justify-end z-50">
                     {user ? (
-                        <div onClick={handleAddBlog} className="btn btn-primary">
+                        <Link to={"/write"} className="btn btn-primary">
                             Write
-                        </div>
+                        </Link>
                     ) : (
                         <Link className="btn btn-primary" to={"/login"}>
                             Login
