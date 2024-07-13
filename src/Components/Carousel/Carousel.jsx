@@ -17,7 +17,7 @@ const BlogCarousel = ({ blogs }) => {
         autoplay: true,
         autoplaySpeed: 3000,
     };
-    
+
     return (
         <Slider {...settings} className="mt-8">
             {blogs.map((blog, index) => (
@@ -29,7 +29,7 @@ const BlogCarousel = ({ blogs }) => {
                         <img
                             src={blog.thumbnail}
                             alt={blog.title}
-                            className="w-full h-full object-cover rounded-lg"
+                            className="w-full h-[350px] object-cover rounded-lg"
                         />
                     </div>
                     <div className="md:w-1/2 w-full md:ml-4 mt-4 md:mt-0 flex flex-col justify-center">
@@ -40,7 +40,7 @@ const BlogCarousel = ({ blogs }) => {
                                 </span>{" "}
                                 —
                                 <span className="text-gray-600 text-xs">
-                                    {getDateDifferenceFromNow(blog.createdAt)}{" "}
+                                    {getDateDifferenceFromNow(blog?.createdAt)}
                                     ago
                                 </span>
                             </p>
