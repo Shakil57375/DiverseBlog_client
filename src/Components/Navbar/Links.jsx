@@ -44,7 +44,7 @@ const Links = ({ isActive, setIsActive }) => {
                 }}
                 className="relative font-bold text-2xl"
             >
-                <RxCross1 className="absolute right-24 top-6 text-xl text-white cursor-pointer hover:-scale-75 hover:duration-100" />
+                <RxCross1 className="absolute right-24 top-6 text-xl text-white cursor-pointer" />
             </div>
             <div className="mt-28 ml-16 flex flex-col gap-8">
                 <motion.div
