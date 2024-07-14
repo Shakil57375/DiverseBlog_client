@@ -8,7 +8,7 @@ const TrendingBlogs = () => {
 
     const fetchData = async () => {
         try {
-            const { data } = await axios.get("http://localhost:5000/blogs");
+            const { data } = await axios.get("http://localhost:5000/trendingBlogs");
             setBlogs(data);
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -17,7 +17,6 @@ const TrendingBlogs = () => {
     useEffect(() => {
         fetchData();
     }, []);
-    console.log(blogs);
     return (
         <div>
             <SectionTitle
