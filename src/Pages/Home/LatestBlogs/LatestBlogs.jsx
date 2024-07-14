@@ -1,14 +1,15 @@
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import { useEffect, useState } from "react";
-import Carousel from "../../../Components/Carousel/Carousel";
 import axios from "axios";
-import BlogCarousel from "../../../Components/Carousel/Carousel";
+import LatestBlog from "./LatestBlog";
 const LatestBlogs = () => {
     const [blogs, setBlogs] = useState([]);
-
+    console.log(blogs);
     const fetchData = async () => {
         try {
-            const { data } = await axios.get("http://localhost:5000/latestBlogs");
+            const { data } = await axios.get(
+                "http://localhost:5000/latestBlogs"
+            );
             setBlogs(data);
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -23,8 +24,10 @@ const LatestBlogs = () => {
                 title={"New Arrivals"}
                 subtitle={"Stay updated with the freshest posts."}
             />
-            <div>
-                <BlogCarousel blogs={blogs} />
+            <div className="grid grid-cols-3 gap-8">
+                {blogs.map((blog) => (
+                    <LatestBlog key={blog._id} blog={blog} />
+                ))}
             </div>
         </div>
     );
