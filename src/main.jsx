@@ -12,6 +12,7 @@ import Login from "./Authentication/Login";
 import Register from "./Authentication/Register";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import BlogDetails from "./Pages/Blogdetails/BlogDetails";
 
 const queryClient = new QueryClient();
 
@@ -25,12 +26,16 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
+                path: "/write",
+                element: <WriteBlog />,
+            },
+            {
                 path: "/foodBlogs/recipes",
                 element: <Recipes />,
             },
             {
-                path: "/write",
-                element: <WriteBlog />,
+                path: "/blogDetails",
+                element: <BlogDetails />,
             },
             {
                 path: "/register",
