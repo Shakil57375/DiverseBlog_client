@@ -9,7 +9,7 @@ const PopularBlogs = () => {
     const fetchData = async () => {
         try {
             const { data } = await axios.get(
-                "http://localhost:5000/popularBlogs"
+                "http://localhost:5000/Popular"
             );
             setBlogs(data);
         } catch (error) {

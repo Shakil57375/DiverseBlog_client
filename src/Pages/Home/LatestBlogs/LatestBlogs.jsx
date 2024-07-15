@@ -8,7 +8,7 @@ const LatestBlogs = () => {
     const fetchData = async () => {
         try {
             const { data } = await axios.get(
-                "http://localhost:5000/latestBlogs"
+                "http://localhost:5000/Latest"
             );
             setBlogs(data);
         } catch (error) {

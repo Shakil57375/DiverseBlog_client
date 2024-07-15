@@ -8,7 +8,7 @@ const TrendingBlogs = () => {
 
     const fetchData = async () => {
         try {
-            const { data } = await axios.get("http://localhost:5000/trendingBlogs");
+            const { data } = await axios.get("http://localhost:5000/Trending");
             setBlogs(data);
         } catch (error) {
             console.error("Error fetching data:", error);
