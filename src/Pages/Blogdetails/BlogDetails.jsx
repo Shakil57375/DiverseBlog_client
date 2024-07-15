@@ -12,7 +12,6 @@ const BlogDetails = () => {
     const { title, content, thumbnail, author, createdAt, category } = blogInfo;
 
     const [blogs, setBlogs] = useState([]);
-    console.log(blogs);
 
     useEffect(() => {
         const fetchData = async () => {

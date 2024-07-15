@@ -1,33 +1,45 @@
-import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import LatestBlog from "./LatestBlog";
+import { Oval } from "react-loader-spinner";
+import Loader from "../../../Components/Loader/Loader";
+
 const LatestBlogs = () => {
     const [blogs, setBlogs] = useState([]);
-    console.log(blogs);
+    const [loading, setLoading] = useState(true);
+
     const fetchData = async () => {
         try {
-            const { data } = await axios.get(
-                "http://localhost:5000/Latest"
-            );
+            const { data } = await axios.get("http://localhost:5000/Latest");
             setBlogs(data);
+            setLoading(false);
         } catch (error) {
             console.error("Error fetching data:", error);
+            setLoading(false);
         }
     };
+
     useEffect(() => {
         fetchData();
     }, []);
+
     return (
         <div>
             <SectionTitle
                 title={"New Arrivals"}
                 subtitle={"Stay updated with the freshest posts."}
             />
-            <div className="grid grid-cols-3 gap-8">
-                {blogs.map((blog) => (
-                    <LatestBlog key={blog._id} blog={blog} />
-                ))}
+            <div>
+                {loading ? (
+                    <Loader />
+                ) : (
+                    <div className="grid grid-cols-3 gap-8">
+                        {blogs.map((blog) => (
+                            <LatestBlog key={blog._id} blog={blog} />
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     );
