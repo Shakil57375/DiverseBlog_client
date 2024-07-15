@@ -83,7 +83,7 @@ const PopularBlog = ({ blogs }) => {
                             {truncateDescription(blog?.content, 50)}
                         </p>
                         <Link
-                            to={blog.link}
+                            to={"blogDetails"}
                             className="text-blue-500 hover:underline"
                         >
                             Read more
