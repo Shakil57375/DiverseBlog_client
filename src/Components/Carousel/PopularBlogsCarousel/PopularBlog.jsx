@@ -67,14 +67,14 @@ const PopularBlog = ({ blogs }) => {
                     </div>
                     <div className=" w-full md:ml-4 mt-4 md:mt-0 flex flex-col justify-center">
                         <div className="flex items-center mt-4 gap-2">
-                        <span className="font-semibold text-lg">
-                            {blog.tags}
-                        </span>{" "}
-                        —
-                        <span className="text-gray-600 text-xs">
-                            {getDateDifferenceFromNow(blog?.createdAt)}
-                            ago
-                        </span>
+                            <span className="font-semibold text-lg">
+                                {blog.tags}
+                            </span>{" "}
+                            —
+                            <span className="text-gray-600 text-xs">
+                                {getDateDifferenceFromNow(blog?.createdAt)}
+                                ago
+                            </span>
                         </div>
                         <h2 className="text-2xl font-bold mb-2">
                             {blog.title}
@@ -83,7 +83,7 @@ const PopularBlog = ({ blogs }) => {
                             {truncateDescription(blog?.content, 50)}
                         </p>
                         <Link
-                            to={"blogDetails"}
+                            to={`/blogDetails/${blog._id}`}
                             className="text-blue-500 hover:underline"
                         >
                             Read more

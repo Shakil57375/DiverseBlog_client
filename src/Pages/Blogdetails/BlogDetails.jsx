@@ -5,6 +5,7 @@ import { IoLogoFacebook } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import LatestBlog from "../Home/LatestBlogs/LatestBlog";
+import NewsletterSubscription from "../../Components/NewsLetter/NewsLetter";
 
 const BlogDetails = () => {
     const blogInfo = useLoaderData();
@@ -90,6 +91,9 @@ const BlogDetails = () => {
                 {blogs.map((blog) => (
                     <LatestBlog key={blog._id} blog={blog} />
                 ))}
+            </div>
+            <div>
+                <NewsletterSubscription />
             </div>
         </div>
     );

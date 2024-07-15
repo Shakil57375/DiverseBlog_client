@@ -27,7 +27,7 @@ const LatestBlog = ({ blog }) => {
                     <div className="text-gray-700 mb-4">
                             {truncateDescription(blog.content, 30)}
                             <Link
-                                to={"/blogDetails"}
+                                to={`/blogDetails/${blog._id}`}
                                 className="text-blue-500 hover:underline"
                             >
                                 Read more
