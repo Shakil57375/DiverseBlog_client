@@ -23,7 +23,7 @@ const BlogCarousel = ({ blogs }) => {
             {blogs.map((blog, index) => (
                 <div
                     key={index}
-                    className="flex flex-col md:flex-row gap-5 items-center bg-white shadow-lg rounded-lg p-6 m-4 custom-slider-item"
+                    className="flex flex-col md:flex-row gap-5 items-center bg-white shadow-lg rounded-lg p-6 m-4 custom-slider"
                 >
                     <div className="md:w-1/2 w-full">
                         <img

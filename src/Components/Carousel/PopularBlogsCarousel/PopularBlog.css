@@ -1,0 +1,49 @@
+/* src/components/carouselOverride.css */
+
+
+.slick-prev:before{
+  content: '←';
+  position: relative !important;
+  left: 5px;
+  top: 7px;
+}
+
+.slick-next:before{
+  content: '→';
+  position: relative !important;
+  top: 7px;
+  left: 5px;
+}
+
+.custom-next, .custom-prev {
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+  }
+  
+  .custom-prev {
+    left: -50px;
+  }
+  
+  .custom-next {
+    right: -40px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 10px;
+    color: gray;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: black;
+  }
+  
+  .custom-slider-item {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .custom-slider-item img {
+    border-radius: 8px;
+  }
+  

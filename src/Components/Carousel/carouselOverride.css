@@ -1,9 +1,7 @@
-/* src/components/carouselOverride.css */
-
 .slick-slide > div {
     display: flex !important;
 }
 
-.custom-slider-item {
+.custom-slider {
     display: flex !important;
 }
