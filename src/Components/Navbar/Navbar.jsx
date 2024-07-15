@@ -63,7 +63,7 @@ const Navbar = () => {
                             Write
                         </Link>
                     ) : (
-                        <Link className="btn btn-primary" to={"/login"}>
+                        <Link className="btn btn-primary"  to={"/login"}>
                             Login
                         </Link>
                     )}

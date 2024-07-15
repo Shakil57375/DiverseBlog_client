@@ -35,7 +35,7 @@
   }
   
   .slick-dots li.slick-active button:before {
-    color: black;
+    color: rgb(169, 110, 0);
   }
   
   .custom-slider-item {
