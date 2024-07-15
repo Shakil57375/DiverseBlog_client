@@ -60,7 +60,7 @@ const Footer = () => {
                     <p className="flex items-center gap-2">
                         <span>Copyright © ${new Date().getFullYear()} - All right
                         reserved by</span>
-                         <a className="text-blue-400" target="_blank" href="https://shakil-s-portfolio-yt9o.vercel.app/">Shakil Hossain</a> ❤️
+                         <a className="text-blue-400" target="_blank" href="https://shakil-s-portfolio-yt9o.vercel.app/">Shakil Hossain ❤️</a> 
                     </p>
                 </aside>
             </footer>
