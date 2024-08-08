@@ -13,6 +13,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const Navbar = () => {
     const [isActive, setIsActive] = useState(false);
     const { user } = useContext(AuthContext);
+    console.log(user)
     return (
         <div>
             <div className="flex items-center bg-white shadow-lg py-6 px-20 fixed w-full top-0 z-20">

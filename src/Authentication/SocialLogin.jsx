@@ -14,6 +14,7 @@ const SocialLogin = () => {
                 const saveUser = {
                     name: loggedInUSer.displayName,
                     email: loggedInUSer.email,
+                    image: loggedInUSer.photoURL,
                 };
                 console.log(loggedInUSer);
                 fetch("http://localhost:5000/users", {
