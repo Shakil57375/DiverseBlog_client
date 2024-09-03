@@ -17,7 +17,7 @@ const BlogDetails = () => {
         const fetchData = async () => {
             try {
                 const { data } = await axios.get(
-                    `http://localhost:5000/${category}`
+                    `https://diverse-blog-server-1l6e08voc-shakil57375s-projects.vercel.app/${category}`
                 );
                 setBlogs(data);
             } catch (error) {

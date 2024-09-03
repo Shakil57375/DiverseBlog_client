@@ -11,7 +11,7 @@ const TrendingBlogs = () => {
 
     const fetchData = async () => {
         try {
-            const { data } = await axios.get("http://localhost:5000/Trending");
+            const { data } = await axios.get("https://diverse-blog-server-1l6e08voc-shakil57375s-projects.vercel.app/Trending");
             setBlogs(data);
             setLoading(false);
         } catch (error) {

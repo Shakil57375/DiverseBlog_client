@@ -24,7 +24,7 @@ const Register = () => {
                         email: data.email,
                         image: data.photoURL,
                     };
-                    fetch("http://localhost:5000/users", {
+                    fetch("https://diverse-blog-server-1l6e08voc-shakil57375s-projects.vercel.app/users", {
                         method: "POST",
                         headers: {
                             "content-type": "application/json",
