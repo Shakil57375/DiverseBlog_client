@@ -23,7 +23,7 @@ const WriteBlog = () => {
 
     const mutation = useMutation({
         mutationFn: (newBlog) =>
-            axios.post("https://diverse-blog-server-1l6e08voc-shakil57375s-projects.vercel.app/blog", newBlog),
+            axios.post("https://diverse-blog-server-dvoughvt8-shakil57375s-projects.vercel.app/blog", newBlog),
         onSuccess: () => {
             queryClient.invalidateQueries(["blogs"]);
             Swal.fire({

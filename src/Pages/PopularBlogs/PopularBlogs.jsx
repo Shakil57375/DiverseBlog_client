@@ -10,7 +10,7 @@ const PopularBlogs = () => {
 
     const fetchData = async () => {
         try {
-            const { data } = await axios.get("https://diverse-blog-server-1l6e08voc-shakil57375s-projects.vercel.app/Popular");
+            const { data } = await axios.get("https://diverse-blog-server-dvoughvt8-shakil57375s-projects.vercel.app/Popular");
             setBlogs(data);
             setLoading(false);
         } catch (error) {
@@ -18,6 +18,7 @@ const PopularBlogs = () => {
             setLoading(false);
         }
     };
+    console.log(blogs)
 
     useEffect(() => {
         fetchData();
